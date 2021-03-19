@@ -1,0 +1,12 @@
+<h1>
+  Custom Landing page using Rails view in Chatwoot
+</h1>
+<br/>
+<br/>
+<strong>
+  <% if current_user %>
+    <a href="/app" class="button large">Dashboard</a>
+  <% else %>
+    <a href="/app/login" class="button large">Sign In</a>
+  <% end %>
+</strong>

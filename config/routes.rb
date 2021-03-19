@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     token_validations: 'devise_overrides/token_validations'
   }, via: [:get, :post]
 
-  root to: 'dashboard#index'
+  root to: 'general#index'
 
   get '/app', to: 'dashboard#index'
   get '/app/*params', to: 'dashboard#index'
@@ -234,7 +234,7 @@ Rails.application.routes.draw do
       resources :super_admins
       resources :access_tokens, only: [:index, :show]
       resources :installation_configs, only: [:index, :new, :create, :show, :edit, :update]
-
+      resources :visitors, only: [:index, :update]
       # resources that doesn't appear in primary navigation in super admin
       resources :account_users, only: [:new, :create, :destroy]
       resources :agent_bots, only: [:index, :new, :create, :show, :edit, :update]
