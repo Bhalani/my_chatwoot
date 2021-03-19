@@ -13,7 +13,7 @@ const routes = [
   ...dashboard.routes,
   ...authRoute.routes,
   {
-    path: '/',
+    path: '/app',
     redirect: frontendURL(`accounts/${loggedInUser.account_id}/dashboard`),
   },
 ];

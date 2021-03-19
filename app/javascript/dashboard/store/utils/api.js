@@ -2,7 +2,6 @@
 import fromUnixTime from 'date-fns/fromUnixTime';
 import differenceInDays from 'date-fns/differenceInDays';
 import Cookies from 'js-cookie';
-import { frontendURL } from '../../helper/URLHelper';
 
 Cookies.defaults = { sameSite: 'Lax' };
 
@@ -30,5 +29,5 @@ export const setAuthCredentials = response => {
 export const clearCookiesOnLogout = () => {
   Cookies.remove('auth_data');
   Cookies.remove('user');
-  window.location = frontendURL('login');
+  window.location = '/';
 };

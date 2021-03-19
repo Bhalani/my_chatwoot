@@ -69,7 +69,7 @@ export const actions = {
           commit(types.default.SET_CURRENT_USER);
           window.axios = createAxios(axios);
           actionCable.init(Vue);
-          window.location = '/';
+          window.location = '/app';
           resolve();
         })
         .catch(error => {
